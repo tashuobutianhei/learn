@@ -496,7 +496,7 @@ Didact.render(element, container);
       }
       好了最简单的render完成
 
-  3: Concurrent Mode
+  3: Concurrent Mode （scheduler）
       看了上面的代码其实有个很严重的问题：递归调用（卡）
       一旦开始render，就没办法停下来，如果dom树很大，就会阻塞主线程，如果浏览器需要执行更高优的操作也得等到渲染完成。
       所以就需要把任务拆成一个个的单元，没完成一个就交给浏览器去执行。
@@ -647,7 +647,7 @@ Didact.render(element, container);
             commitWork(fiber.sibling)
           }
 
-    6:  reconciliation
+    6:  reconciliation （Diff）
           我们上面一直在做的就是添加dom，还有更新和删除，更新和删除的关键就是把render的结果和上一次的fiber树进行比较（diff）
           所以就得在每次commit结束后保存上一次commit的fiber树，这颗树叫currentRoot
           function commitRoot() {
