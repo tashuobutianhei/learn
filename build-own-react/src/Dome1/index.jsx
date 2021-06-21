@@ -12,7 +12,8 @@ const Dome1 = () => {
     }, [num])
 
     return <div onClick={() => {
-        setNum(num => num + 1)
+        setNum(num => num + 1);
+        setNum(num => num + 2);
     }}>{num}</div>
 }
 

@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import Dome from './Dome1';
 import Dome2 from './Dome2';
 import Dome3 from './Dome3';
+import Dome4 from './Dome4';
+import Dome5 from './Dome5';
+
+
 
 // import render from './myReact.js';
 import './index.css';
@@ -25,6 +29,16 @@ function App() {
       key: 'dome3',
       label: 'dome3',
       value: <Dome3 />,
+    },
+    {
+      key: 'dome4',
+      label: 'dome4',
+      value: <Dome4 />,
+    },
+    {
+      key: 'dome5',
+      label: 'dome5',
+      value: <Dome5 />,
     },
   ];
 
